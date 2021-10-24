@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectros</title>
+
+    <style>
+        /* Here is the stylesheet written in CSS */
+        /* this is a CLASS SELECTOR and it will be applied to all elements with class name "highlight" */
+        .highlight {
+            color: rgb(5, 170, 55);
+            font-style: italic;
+        }
+
+        /* combining two classes */
+        .highlight.background {
+            background-color: rgb(46, 46, 46);
+            color: rgb(255, 5, 5);
+            font-style: bold;
+        }
+
+        /* Descendant selector */
+        section h2 {                /* or (section > h2) */
+            color: blue;
+        }
+
+        /* Descendant selector */
+        section li {
+            font-family: "Georgia", "Times New Roman";
+            color: rgb(180, 13, 144);
+        }
+
+        /* id selector */
+        #id1 {
+            background-color: aquamarine;
+            font-size: 28px;
+            font-family: "Comic Sans MS";
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><center><u>CSS Selectors</u></center></h1>
+
+    <section>
+        <h2>Class Selector: </h2>
+        <div class="highlight">
+            Here, Class Selector for class name = "highlight" is being applied.
+        </div>
+    </section>
+
+    <section>
+        <h2>Combining multiple Class Selectors: </h2>
+        <div class="highlight background">
+            Here, two classes "highlight" and "background" (names do not have any effect on the style) are being applied.
+        </div>
+    </section>
+
+    <section>
+        <h2>Descendant Selector: </h2>
+        <h4>Accounts: </h4>
+        <ul>
+            <!-- works for "section li" even if li is inside ul -->
+            <li>Linkedin</li>
+            <li>Github</li>
+            <li>ORCID</li>
+        </ul>
+    </section>
+
+    <section id="id1">
+        <p>ID Selector has been used here, applying background-color, font-family and font-size for this section.</p>
+    </section>
+
+    <section id="footer">
+        <p>Copyright &copy; 2021 Souvik Majumder - All Rights Reserved.</p>
+    </section>
+</body>
+</html>

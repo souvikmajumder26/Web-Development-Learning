@@ -1,0 +1,57 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #151320;
+}
+div{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #1c1b29;
+}
+div:before{
+    content: "";
+    background-image: conic-gradient(
+        #04b0ee 20deg,
+        transparent 120deg
+    );
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    animation: rotate 2s infinite linear;
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+div:after{
+    content: "AWESOME";
+    height: 94%;
+    width: 94%;
+    position: absolute;
+    background-color: #1c1b29;
+    border-radius: 5px;
+    top: 3%;
+    left: 3%;
+    color: #04b0ee;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    letter-spacing: 6px;
+}
